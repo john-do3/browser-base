@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "@cliqz/adblocker-electron": "1.22.2",
+    "@cliqz/adblocker-electron": "1.23.8",
     "@electron/remote": "^1.2.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/animejs": "^3.1.3",
