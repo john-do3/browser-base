@@ -7170,10 +7170,10 @@ typescript-plugin-styled-components@^1.6.0:
   resolved "https://registry.nlark.com/typescript-plugin-styled-components/download/typescript-plugin-styled-components-1.6.0.tgz#6ee1d2b079490ad101055112fda1974d761f2e96"
   integrity sha1-buHSsHlJCtEBBVES/aGXTXYfLpY=
 
-typescript@^4.3.4:
-  version "4.3.5"
-  resolved "https://registry.nlark.com/typescript/download/typescript-4.3.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
-  integrity sha1-TRw3zBbok5c8RaBohrcRMjTxGfQ=
+typescript@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
+  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
 
 unbox-primitive@^1.0.0, unbox-primitive@^1.0.1:
   version "1.0.1"
