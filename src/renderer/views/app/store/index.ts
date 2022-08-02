@@ -3,7 +3,7 @@ import { observable, computed, makeObservable, makeAutoObservable } from 'mobx';
 import { TabsStore } from './tabs';
 import { TabGroupsStore } from './tab-groups';
 import { AddTabStore } from './add-tab';
-import { ipcRenderer, remote } from 'electron';
+import { ipcRenderer } from 'electron';
 import { ExtensionsStore } from './extensions';
 import { SettingsStore } from './settings';
 import { getCurrentWindow } from '../utils/windows';
@@ -285,7 +285,7 @@ export class Store {
           );
 
           if (data.focus) {
-            remote.getCurrentWebContents().focus();
+            require('@electron/remote').getCurrentWebContents().focus();
             this.inputRef.focus();
           }
 
