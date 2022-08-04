@@ -79,7 +79,7 @@ const getInput = (name) => {
 
     run('yarn run build');
     run(
-      `npx --no-install electron-builder --${platform} ${
+      `npx --no-install electron-builder --publish never --${platform} ${
         release ? '-p always' : ''
       }`,
     );
