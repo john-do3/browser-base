@@ -3859,16 +3859,16 @@ https-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
-icojs@^0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/icojs/-/icojs-0.16.1.tgz#f3c38f4e206c891a3029b45633202236fc528e91"
-  integrity sha512-ACI3naXGBFUzuFgfg90xI4v5LovORxBxk1KWnruwdANAkp+eDMgXND+8qK5Knea8jZzlx58LwB5PTA5g2ya2zQ==
+icojs@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/icojs/-/icojs-0.17.0.tgz#5cb1bc935aa5fd205d65ed23e4b1f91301d28910"
+  integrity sha512-TRxWxK9fccQtFLZv4XPY4d4pc0hT9wi4UaU8SJqHHF7jSIhvrAhoHAtiX2zsEnOzUpFs9+NRfZNVhDQmYZQCBg==
   dependencies:
     bmp-js "0.1.0"
     decode-ico "^0.4.0"
     file-type "^16.2.0"
     jpeg-js "^0.4.3"
-    pngjs "^5.0.0"
+    pngjs "^6.0.0"
     to-data-view "^1.1.0"
 
 iconv-corefoundation@^1.1.7:
@@ -5428,10 +5428,10 @@ plist@^3.0.1, plist@^3.0.4:
     base64-js "^1.5.1"
     xmlbuilder "^15.1.1"
 
-pngjs@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-5.0.0.tgz#e79dd2b215767fd9c04561c01236df960bce7fbb"
-  integrity sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==
+pngjs@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-6.0.0.tgz#ca9e5d2aa48db0228a52c419c3308e87720da821"
+  integrity sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==
 
 portfinder@^1.0.26:
   version "1.0.28"
