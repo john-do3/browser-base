@@ -76,7 +76,7 @@
     "fork-ts-checker-webpack-plugin": "^7.2.13",
     "html-webpack-plugin": "^5.3.2",
     "icojs": "^0.17.0",
-    "jszip": "^3.6.0",
+    "jszip": "^3.10.1",
     "mobx": "6.6.1",
     "mobx-react-lite": "3.2.0",
     "nedb": "1.8.0",
