@@ -526,10 +526,10 @@
   resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.5.tgz#3cb6c7b90069c6e2969a392eb65ec6311e92c1ab"
   integrity sha512-4i3i1YuNaNEPoHBJY78uzYu8qKIwyx96G04tnVtNhRMQC9I1Xhg6fY9GeWmZAzudaesKKrPkQgTCthT1zSGYyg==
 
-"@types/chrome@0.0.145":
-  version "0.0.145"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.145.tgz#6c53ae0af5f25350b07bfd24cf459b5fe65cd9b8"
-  integrity sha512-vLvTMmfc8mvwOZzkmn2UwlWSNu0t0txBkyuIv8NgihRkvFCe6XJX65YZAgAP/RdBit3enhU2GTxCr+prn4uZmA==
+"@types/chrome@0.0.193":
+  version "0.0.193"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.193.tgz#cd0dc5033f27a243d228aebe566c3ec19ef17e36"
+  integrity sha512-R8C84oqvk8A8C8G1viBd8qLpDr86Y/jwD+KLgzUekbIT9RGds6a9GnlQyg8P7ltnGogTMHkiEQK0ZlcrvTeo3Q==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"
