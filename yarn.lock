@@ -652,10 +652,10 @@
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
-"@types/nedb@1.8.11":
-  version "1.8.11"
-  resolved "https://registry.yarnpkg.com/@types/nedb/-/nedb-1.8.11.tgz#a8f9d9c8d43d12e98df7cbcfeb5f107bbb0971c0"
-  integrity sha512-qHQRLZ0e6l/XK/2Qb2v5N1ujmdttYkUvnRI4nPIifMy6vYwoAnER10xhX13isWjjQtNsrjNLinZgDDguzPmEKw==
+"@types/nedb@1.8.12":
+  version "1.8.12"
+  resolved "https://registry.yarnpkg.com/@types/nedb/-/nedb-1.8.12.tgz#597bb124ddaf16039c6d478f4abc0a8f2006b134"
+  integrity sha512-ICDoQMORMjOSqfNFXT4ENXfwwCir1BPblXNm0SPH7C4Q10ou+pvVagcFAJ+rrzf3A47tGU4K/KbzKu7wO9j45Q==
   dependencies:
     "@types/node" "*"
 
@@ -5881,14 +5881,7 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rxjs@^7.0.0:
-  version "7.5.6"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.6.tgz#0446577557862afd6903517ce7cae79ecb9662bc"
-  integrity sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==
-  dependencies:
-    tslib "^2.1.0"
-
-rxjs@^7.5.2:
+rxjs@^7.0.0, rxjs@^7.5.2:
   version "7.5.6"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.6.tgz#0446577557862afd6903517ce7cae79ecb9662bc"
   integrity sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==
