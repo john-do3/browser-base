@@ -75,7 +75,7 @@
     "file-type": "16.5.0",
     "fork-ts-checker-webpack-plugin": "^6.2.12",
     "html-webpack-plugin": "^5.3.2",
-    "icojs": "^0.16.1",
+    "icojs": "^0.17.0",
     "jszip": "^3.6.0",
     "mobx": "6.6.1",
     "mobx-react-lite": "3.2.0",
