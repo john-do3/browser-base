@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react-lite';
 import { IDownloadItem } from '~/interfaces';
-import { clipboard, ipcRenderer, remote, shell } from 'electron';
+import { clipboard, ipcRenderer, shell } from 'electron';
 import {
   ICON_CHECK,
   ICON_PAUSE,
@@ -36,7 +36,7 @@ const toggleOpenWhenDone =
 
 const showInFolder =
   (item: IDownloadItem) => (e: React.MouseEvent<HTMLDivElement>) => {
-    remote.shell.showItemInFolder(item.savePath);
+    require('@electron/remote').shell.showItemInFolder(item.savePath);
     store.closeAllDownloadMenu();
     e.stopPropagation();
   };
@@ -82,8 +82,8 @@ const trashDownload =
         console.log('Downloaded item has been deleted successfully.');
       })
       .catch((err) => {
-        const window = remote.getCurrentWindow();
-        const dialog = remote.dialog;
+        const window = require('@electron/remote').getCurrentWindow();
+        const dialog = require('@electron/remote').dialog;
         dialog.showMessageBox(window, {
           title: "Couldn't Delete File",
           buttons: ['cancel'],

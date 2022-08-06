@@ -12,8 +12,8 @@ import {
   SecondaryText,
 } from './style';
 import { IDownloadItem } from '~/interfaces';
-import prettyBytes = require('pretty-bytes');
-import { shell } from 'electron';
+import prettyBytes from 'pretty-bytes';
+const { shell } = require('electron');
 import store from '../../store';
 import { DownloadItemMenu } from '../DownloadItemMenu';
 
