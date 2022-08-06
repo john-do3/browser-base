@@ -15,7 +15,7 @@ import {
 import { ICON_VOLUME_HIGH, ICON_VOLUME_OFF } from '~/renderer/constants';
 import { ITab, ITabGroup } from '../../models';
 import store from '../../store';
-import { remote, ipcRenderer, nativeImage, Menu } from 'electron';
+import { ipcRenderer, nativeImage, Menu } from 'electron';
 import { COMPACT_TAB_MARGIN_TOP } from '~/constants/design';
 
 const removeTab = (tab: ITab) => (e: React.MouseEvent<HTMLDivElement>) => {
@@ -109,7 +109,7 @@ const onContextMenu = (tab: ITab) => () => {
     .getGroups()
     .filter((t) => t.id !== tab.tabGroupId);
 
-  const menu = remote.Menu.buildFromTemplate([
+  const menu = require('@electron/remote').Menu.buildFromTemplate([
     {
       label: 'New tab to the right',
       click: () => {
@@ -231,7 +231,7 @@ const addTabToNewGroup = (tab: ITab): void => {
 };
 
 const tabGroupSubmenu = (tab: ITab, tabGroups: ITabGroup[]): Menu => {
-  return remote.Menu.buildFromTemplate([
+  return require('@electron/remote').Menu.buildFromTemplate([
     {
       label: 'New group',
       click: () => {
