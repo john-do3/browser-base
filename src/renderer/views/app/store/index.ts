@@ -73,6 +73,8 @@ export class Store {
 
   public zoomFactor = 1;
 
+  public isLoggedIn = false;
+
   public dialogsVisibility: { [key: string]: boolean } = {
     menu: false,
     'add-bookmark': false,
@@ -193,6 +195,11 @@ export class Store {
       theme: computed,
       isCompact: computed,
       downloadProgress: computed,
+      isLoggedIn: observable,
+    });
+
+    ipcRenderer.on('is-logged-in', (e, data) => {
+      this.isLoggedIn = data;
     });
 
     ipcRenderer.on('update-navigation-state', (e, data) => {

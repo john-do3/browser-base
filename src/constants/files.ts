@@ -21,3 +21,8 @@ export const FILES = {
   'settings.json': DEFAULT_SETTINGS,
   'window-data.json': {},
 };
+
+export const AUTH_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'https://localhost:44486/auth/'
+    : 'todo fill prod auth url';

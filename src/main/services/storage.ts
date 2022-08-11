@@ -52,6 +52,7 @@ export class StorageService {
     permissions: null,
   };
 
+  public token: string = '';
   public history: IHistoryItem[] = [];
 
   public bookmarks: IBookmark[] = [];
