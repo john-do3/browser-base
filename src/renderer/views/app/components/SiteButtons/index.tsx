@@ -8,6 +8,8 @@ import {
   ICON_MAGNIFY_PLUS,
   ICON_MAGNIFY_MINUS,
   ICON_SHIELD,
+  ICON_LOGIN,
+  ICON_LOGOUT,
 } from '~/renderer/constants/icons';
 import { ipcRenderer } from 'electron';
 import { parse } from 'url';
@@ -30,6 +32,20 @@ const showZoomDialog = async () => {
 
 const onStarClick = (e: React.MouseEvent<HTMLDivElement>) => {
   showAddBookmarkDialog();
+};
+
+const onLoginClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  store.tabs.addTab({
+    active: true,
+    url: 'https://localhost:44486/auth/signin',
+  });
+};
+
+const onLogoutClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  store.tabs.addTab({
+    active: true,
+    url: 'https://localhost:44486/auth/signout',
+  });
 };
 
 const onZoomClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -128,6 +144,20 @@ export const SiteButtons = observer(() => {
         opacity={store.settings.object.shield ? 0.87 : 0.54}
         onContextMenu={onShieldContextMenu}
       ></ToolbarButton>
+      {!store.isLoggedIn && (
+        <ToolbarButton
+          size={16}
+          icon={ICON_LOGIN}
+          onMouseDown={onLoginClick}
+        ></ToolbarButton>
+      )}
+      {store.isLoggedIn && (
+        <ToolbarButton
+          size={16}
+          icon={ICON_LOGOUT}
+          onMouseDown={onLogoutClick}
+        ></ToolbarButton>
+      )}
     </>
   );
 });

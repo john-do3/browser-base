@@ -4,6 +4,7 @@ import { getViewMenu } from './menus/view';
 import { AppWindow } from './windows';
 import { IHistoryItem, IBookmark } from '~/interfaces';
 import {
+  AUTH_URL,
   ERROR_PROTOCOL,
   NETWORK_ERROR_HOST,
   WEBUI_BASE_URL,
@@ -18,6 +19,7 @@ import { TabEvent } from '~/interfaces/tabs';
 import { Queue } from '~/utils/queue';
 import { Application } from './application';
 import { getUserAgentForURL } from './user-agent';
+import { configureRequestOptionsFromUrl } from 'builder-util-runtime';
 
 interface IAuthInfo {
   url: string;
@@ -54,6 +56,7 @@ export class View {
   private historyQueue = new Queue();
 
   private lastUrl = '';
+  private isAuthTokenReloaded = false;
 
   public constructor(window: AppWindow, url: string, incognito: boolean) {
     this.browserView = new BrowserView({
@@ -212,6 +215,25 @@ export class View {
         }
       },
     );
+
+    this.webContents.on('did-finish-load', (e: Electron.Event) => {
+      //console.log('doc did finish load');
+
+      if (this.webContents.getURL().includes(AUTH_URL)) {
+        if (!this.isAuthTokenReloaded) {
+          console.log('reload auth token');
+          this.isAuthTokenReloaded = true;
+          // reload cookies to get actual values
+          setTimeout(() => {
+            this.webContents.reload();
+          }, 200);
+        } else {
+          console.log('handle auth token');
+          this.CheckAuthToken();
+          this.isAuthTokenReloaded = false;
+        }
+      }
+    });
 
     this.webContents.addListener(
       'page-favicon-updated',
@@ -434,6 +456,33 @@ export class View {
         });
       }
     }
+  }
+
+  public CheckAuthToken() {
+    const { session } = require('electron');
+    const ses = session.fromPartition('persist:name');
+    //ses.cookies
+    this.webContents.session.cookies
+      .get({ name: '.AspNetCore.Application.Id' })
+      .then((cookies) => {
+        //console.log(cookies[0]);
+        var isLoggedIn = false;
+        if (cookies[0]) {
+          Application.instance.storage.token = cookies[0].value;
+          isLoggedIn = true;
+        } else {
+          Application.instance.storage.token = '';
+          isLoggedIn = false;
+        }
+
+        console.log('isLoggedIn: ' + isLoggedIn);
+        this.window.send('is-logged-in', isLoggedIn);
+
+        console.log('application token:' + Application.instance.storage.token);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   public send(channel: string, ...args: any[]) {

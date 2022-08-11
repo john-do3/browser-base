@@ -70,3 +70,7 @@ export const ICON_WEATHER_NIGHT_RAIN = require('~/renderer/resources/icons/weath
 export const ICON_WEATHER_NIGHT_SHOWERS = require('~/renderer/resources/icons/weather/night/showers.png');
 export const ICON_WEATHER_NIGHT_SNOW = require('~/renderer/resources/icons/weather/night/snow.png');
 export const ICON_WEATHER_NIGHT_STORM = require('~/renderer/resources/icons/weather/night/storm.png');
+
+export const ICON_USER_KEY = require('~/renderer/resources/icons/user-key-icon.svg');
+export const ICON_LOGIN = require('~/renderer/resources/icons/login-variant.svg');
+export const ICON_LOGOUT = require('~/renderer/resources/icons/logout-variant.svg');
