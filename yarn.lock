@@ -2613,10 +2613,10 @@ electron-updater@5.2.1:
     semver "^7.3.5"
     typed-emitter "^2.1.0"
 
-electron@20.0.1:
-  version "20.0.1"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-20.0.1.tgz#eaaa14a7b54b6c405b1768727be4c55976a95419"
-  integrity sha512-5c7zr8oy1JsCV86BaoIPVLo4yevDfvPEsMQcGlgfJ5PS7ouAVvR1aHt0tjF65bL1vYdoQ1olvpextg2T8FyICA==
+electron@21.0.1:
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-21.0.1.tgz#753669454a86a89fd70ba9614c79f789fb177c34"
+  integrity sha512-jLVSLakd0fO2GPnW4xXQrI93R464jeFb2ISngqRP3wpwH96XqeANkuAYLAr9TVhfQMCIWnuPROBZ+NU7nuk0WA==
   dependencies:
     "@electron/get" "^1.14.1"
     "@types/node" "^16.11.26"
