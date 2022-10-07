@@ -66,7 +66,7 @@
     "electron": "20.0.1",
     "electron-builder": "23.3.3",
     "electron-extensions": "^7.0.0-beta.3",
-    "electron-updater": "5.2.1",
+    "electron-updater": "5.3.0",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.2.1",
