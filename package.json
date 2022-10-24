@@ -60,7 +60,7 @@
     "animejs": "^3.2.1",
     "awesome-node-loader": "^1.1.1",
     "babel-loader": "^8.2.2",
-    "concurrently": "^7.3.0",
+    "concurrently": "^7.5.0",
     "copy-webpack-plugin": "^11.0.0",
     "cross-env": "7.0.3",
     "electron": "20.0.1",
