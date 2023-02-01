@@ -63,7 +63,7 @@
     "concurrently": "^7.3.0",
     "copy-webpack-plugin": "^11.0.0",
     "cross-env": "7.0.3",
-    "electron": "20.0.1",
+    "electron": "22.2.0",
     "electron-builder": "23.3.3",
     "electron-extensions": "^7.0.0-beta.3",
     "electron-updater": "5.2.1",
