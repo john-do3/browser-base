@@ -38,7 +38,7 @@
     "rebuild": "electron-builder install-app-deps"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.21.0",
     "@cliqz/adblocker-electron": "1.23.8",
     "@electron/remote": "^2.0.8",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
